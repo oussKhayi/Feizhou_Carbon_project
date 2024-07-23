@@ -29,7 +29,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="md:px-32 pt-28 lg:py-16 bg-[#1a835d] min-w-[100%] min-h-[82dvh]">
+    <div className="md:px-32 pt-28 lg:py-16 bg-gradient-to-b from-[#8cc842] to-[#3d9b4a] min-w-[100%] min-h-[82dvh]">
       <div className="w-[100%] h-fit text-center pt-20 md:pt-52 flex flex-col items-center justify-center">
         <div id="titles" className="flex flex-col gap-y-4">
           <h1 className="text-3xl md:text-5xl font-bold text-white">
