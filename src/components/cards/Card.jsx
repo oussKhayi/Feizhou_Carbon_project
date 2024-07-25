@@ -1,52 +1,27 @@
 import React from "react";
 
-const Card = ({ content1, content2 }) => {
+const Card = ({ card }) => {
   return (
-    <div className="card-parent relative w-full items-center flex flex-col h-[400px] py-24 my-4 cursor-pointer bg-gray-200 rounded-lg bg-base-100 shadow-xl">
-      <div className="card card-front absolute bg-gray-200 p-2 rounded-2xl shadow-xl shadow-indigo-100">
-        <div className="icon w-[4rem]">
-          {content1?.icon ? content1?.icon : <h1>ICON</h1>}
-        </div>
-        <div className="p-4">
-          <h2 className="text-lg font-bold">
-            {content1?.title ? content1?.title : "title here"}
-          </h2>
-          <ul className="text-gray-700">
-            {content1?.description
-              ? content1.description?.map((element, i) => {
-                  return (
-                    <ol key={i} className="text-sm">
-                      -{element}
-                    </ol>
-                  );
-                })
-              : "description here"}
-          </ul>
+    <div class="container bg-violet-4000 p-2 min-h-[40dvh]">
+      <div class="front side">
+        <div class="content-card flex flex-col gap-y-8 items-center">
+          <div className="p-1 w-20">{card?.icon}</div>
+          <p className="text-xl font-semibold">{card.content1.title}</p>
+          <p>{card.content1.description}</p>
         </div>
       </div>
-      <div className="card card-back absolute bg-gray-200 p-2 rounded-2xl shadow-xl shadow-indigo-100">
-        <div className="icon w-[4rem]">
-          {content2?.icon ? content2?.icon : <h1>ICON</h1>}
-        </div>
-        <div className="p-4">
-          <h2 className="text-lg font-bold">
-            {content2?.title ? content2?.title : "title here"}
-          </h2>
-          <ul className="text-gray-700">
-            {content2?.description
-              ? content2.description?.map((element, i) => {
-                  return (
-                    <ol key={i} className="text-sm">
-                      -{element}
-                    </ol>
-                  );
-                })
-              : "description here"}
+      <div class="back side">
+        <div class="content-card flex flex-col gap-y-8 items-center">
+          <div className="p-1 w-20">{card?.icon}</div>
+          <p className="text-xl font-semibold">{card.content1.title}</p>
+          <ul className="list-disc space-y-2">
+            {card.content2.description.map((item, i) => {
+              return <li key={i}>{item}</li>;
+            })}
           </ul>
-        </div>{" "}
+        </div>
       </div>
     </div>
-    // <div className="h-96 bg-green-500"></div>
   );
 };
 

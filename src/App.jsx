@@ -5,6 +5,9 @@ import feizhouCom from "./assets/feizhouCom.png";
 import AboutSection from "./components/AboutSection";
 import FeizouComConsists from "./components/FeizouComConsists";
 import CardsGroup from "./components/CardsGroup";
+import OurServices from "./components/OurServices";
+import More from "./components/More";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -12,8 +15,10 @@ function App() {
       <HeroSection />
       <AboutSection />
       <FeizouComConsists />
-      <CardsGroup />
-      <div className="h-screen"></div>
+      {/* <CardsGroup /> */}
+      <OurServices />
+      <More />
+      <Footer />
     </>
   );
 }

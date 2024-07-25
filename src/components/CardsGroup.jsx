@@ -2,108 +2,202 @@ import React from "react";
 import Card from "./cards/Card";
 
 const CardsGroup = () => {
+  const services = [
+    {
+      icon: (
+        <svg
+          viewBox="0 0 41 41"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="icon icon--lg mr-0 fill-none min-h-full max-h-full min-w-full"
+          name="wux-seo"
+        >
+          <mask id="path-1-inside-1_6651_7155" fill="white">
+            <path d="M41 20.5C41 31.8218 31.8218 41 20.5 41C9.17816 41 0 31.8218 0 20.5C0 9.17816 9.17816 0 20.5 0C31.8218 0 41 9.17816 41 20.5Z"></path>
+          </mask>
+          <path
+            d="M18.3984 10V9C17.8462 9 17.3984 9.44771 17.3984 10H18.3984ZM23.3984 10H24.3984C24.3984 9.44771 23.9507 9 23.3984 9V10ZM23.3984 28.8968V29.8968C23.9507 29.8968 24.3984 29.4491 24.3984 28.8968H23.3984ZM17.3984 28.8968C17.3984 29.4491 17.8462 29.8968 18.3984 29.8968C18.9507 29.8968 19.3984 29.4491 19.3984 28.8968H17.3984ZM18.4999 27.8968C17.9476 27.8968 17.4999 28.3446 17.4999 28.8968C17.4999 29.4491 17.9476 29.8968 18.4999 29.8968V27.8968ZM26.7972 15.2491V14.2491C26.245 14.2491 25.7972 14.6969 25.7972 15.2491H26.7972ZM31.7972 15.2491H32.7972C32.7972 14.6969 32.3495 14.2491 31.7972 14.2491V15.2491ZM31.7972 28.8969V29.8969C32.3495 29.8969 32.7972 29.4492 32.7972 28.8969H31.7972ZM25.7972 28.8969C25.7972 29.4492 26.245 29.8969 26.7972 29.8969C27.3495 29.8969 27.7972 29.4492 27.7972 28.8969H25.7972ZM29.5 27.8969C28.9477 27.8969 28.5 28.3446 28.5 28.8969C28.5 29.4492 28.9477 29.8969 29.5 29.8969V27.8969ZM10 20.4982V19.4982C9.44771 19.4982 9 19.9459 9 20.4982H10ZM15 20.4982H16C16 19.9459 15.5523 19.4982 15 19.4982V20.4982ZM15 28.8968V29.8968C15.5523 29.8968 16 29.4491 16 28.8968H15ZM9 25.8968C9 26.4491 9.44771 26.8968 10 26.8968C10.5523 26.8968 11 26.4491 11 25.8968H9ZM10 27.8968C9.44771 27.8968 9 28.3445 9 28.8968C9 29.4491 9.44771 29.8968 10 29.8968V27.8968ZM10.5 31.5C9.94771 31.5 9.5 31.9477 9.5 32.5C9.5 33.0523 9.94771 33.5 10.5 33.5V31.5ZM31 33.5C31.5523 33.5 32 33.0523 32 32.5C32 31.9477 31.5523 31.5 31 31.5V33.5ZM18.3984 11H23.3984V9H18.3984V11ZM22.3984 10V28.8968H24.3984V10H22.3984ZM19.3984 28.8968V10H17.3984V28.8968H19.3984ZM23.3984 27.8968H18.4999V29.8968H23.3984V27.8968ZM26.7972 16.2491H31.7972V14.2491H26.7972V16.2491ZM30.7972 15.2491V28.8969H32.7972V15.2491H30.7972ZM27.7972 28.8969V15.2491H25.7972V28.8969H27.7972ZM31.7972 27.8969H29.5V29.8969H31.7972V27.8969ZM10 21.4982H15V19.4982H10V21.4982ZM14 20.4982V28.8968H16V20.4982H14ZM11 25.8968V20.4982H9V25.8968H11ZM15 27.8968H10V29.8968H15V27.8968ZM10.5 33.5H31V31.5H10.5V33.5ZM39 20.5C39 30.7173 30.7173 39 20.5 39V43C32.9264 43 43 32.9264 43 20.5H39ZM20.5 39C10.2827 39 2 30.7173 2 20.5H-2C-2 32.9264 8.07359 43 20.5 43V39ZM2 20.5C2 10.2827 10.2827 2 20.5 2V-2C8.07359 -2 -2 8.07359 -2 20.5H2ZM20.5 2C30.7173 2 39 10.2827 39 20.5H43C43 8.07359 32.9264 -2 20.5 -2V2Z"
+            fill="#F0465F"
+            mask="url(#path-1-inside-1_6651_7155)"
+          ></path>
+        </svg>
+      ),
+      content1: {
+        title: "Search Engine Optimization",
+        description:
+          "Make data-driven decisions and ensure technical requirements are in place.",
+      },
+      content2: {
+        title: "Feature Highlights: SEO",
+        description: [
+          "Feature Highlights: SEO",
+          "description: [CTR Underperformer report",
+          "SEO A/B tests",
+          "Keyword Monitoring",
+          "Google Top 10 Tests",
+          "Traffic monetization",
+        ],
+      },
+    },
+    {
+      icon: (
+        <svg
+          viewBox="0 0 41 41"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="icon icon--lg mr-0 fill-none min-h-full max-h-full min-w-full"
+          name="wux-seo"
+        >
+          <mask id="path-1-inside-1_6651_7155" fill="white">
+            <path d="M41 20.5C41 31.8218 31.8218 41 20.5 41C9.17816 41 0 31.8218 0 20.5C0 9.17816 9.17816 0 20.5 0C31.8218 0 41 9.17816 41 20.5Z"></path>
+          </mask>
+          <path
+            d="M18.3984 10V9C17.8462 9 17.3984 9.44771 17.3984 10H18.3984ZM23.3984 10H24.3984C24.3984 9.44771 23.9507 9 23.3984 9V10ZM23.3984 28.8968V29.8968C23.9507 29.8968 24.3984 29.4491 24.3984 28.8968H23.3984ZM17.3984 28.8968C17.3984 29.4491 17.8462 29.8968 18.3984 29.8968C18.9507 29.8968 19.3984 29.4491 19.3984 28.8968H17.3984ZM18.4999 27.8968C17.9476 27.8968 17.4999 28.3446 17.4999 28.8968C17.4999 29.4491 17.9476 29.8968 18.4999 29.8968V27.8968ZM26.7972 15.2491V14.2491C26.245 14.2491 25.7972 14.6969 25.7972 15.2491H26.7972ZM31.7972 15.2491H32.7972C32.7972 14.6969 32.3495 14.2491 31.7972 14.2491V15.2491ZM31.7972 28.8969V29.8969C32.3495 29.8969 32.7972 29.4492 32.7972 28.8969H31.7972ZM25.7972 28.8969C25.7972 29.4492 26.245 29.8969 26.7972 29.8969C27.3495 29.8969 27.7972 29.4492 27.7972 28.8969H25.7972ZM29.5 27.8969C28.9477 27.8969 28.5 28.3446 28.5 28.8969C28.5 29.4492 28.9477 29.8969 29.5 29.8969V27.8969ZM10 20.4982V19.4982C9.44771 19.4982 9 19.9459 9 20.4982H10ZM15 20.4982H16C16 19.9459 15.5523 19.4982 15 19.4982V20.4982ZM15 28.8968V29.8968C15.5523 29.8968 16 29.4491 16 28.8968H15ZM9 25.8968C9 26.4491 9.44771 26.8968 10 26.8968C10.5523 26.8968 11 26.4491 11 25.8968H9ZM10 27.8968C9.44771 27.8968 9 28.3445 9 28.8968C9 29.4491 9.44771 29.8968 10 29.8968V27.8968ZM10.5 31.5C9.94771 31.5 9.5 31.9477 9.5 32.5C9.5 33.0523 9.94771 33.5 10.5 33.5V31.5ZM31 33.5C31.5523 33.5 32 33.0523 32 32.5C32 31.9477 31.5523 31.5 31 31.5V33.5ZM18.3984 11H23.3984V9H18.3984V11ZM22.3984 10V28.8968H24.3984V10H22.3984ZM19.3984 28.8968V10H17.3984V28.8968H19.3984ZM23.3984 27.8968H18.4999V29.8968H23.3984V27.8968ZM26.7972 16.2491H31.7972V14.2491H26.7972V16.2491ZM30.7972 15.2491V28.8969H32.7972V15.2491H30.7972ZM27.7972 28.8969V15.2491H25.7972V28.8969H27.7972ZM31.7972 27.8969H29.5V29.8969H31.7972V27.8969ZM10 21.4982H15V19.4982H10V21.4982ZM14 20.4982V28.8968H16V20.4982H14ZM11 25.8968V20.4982H9V25.8968H11ZM15 27.8968H10V29.8968H15V27.8968ZM10.5 33.5H31V31.5H10.5V33.5ZM39 20.5C39 30.7173 30.7173 39 20.5 39V43C32.9264 43 43 32.9264 43 20.5H39ZM20.5 39C10.2827 39 2 30.7173 2 20.5H-2C-2 32.9264 8.07359 43 20.5 43V39ZM2 20.5C2 10.2827 10.2827 2 20.5 2V-2C8.07359 -2 -2 8.07359 -2 20.5H2ZM20.5 2C30.7173 2 39 10.2827 39 20.5H43C43 8.07359 32.9264 -2 20.5 -2V2Z"
+            fill="#F0465F"
+            mask="url(#path-1-inside-1_6651_7155)"
+          ></path>
+        </svg>
+      ),
+      content1: {
+        title: "Feature Highlights: Eco Certification",
+        description: [
+          "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
+          "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
+          "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
+        ],
+      },
+      content2: {
+        title: "Website Speed Optimization",
+        description: [
+          "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
+          "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
+          "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
+        ],
+      },
+    },
+    {
+      icon: (
+        <svg
+          viewBox="0 0 41 41"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="icon icon--lg mr-0 fill-none min-h-full max-h-full min-w-full"
+          name="wux-seo"
+        >
+          <mask id="path-1-inside-1_6651_7155" fill="white">
+            <path d="M41 20.5C41 31.8218 31.8218 41 20.5 41C9.17816 41 0 31.8218 0 20.5C0 9.17816 9.17816 0 20.5 0C31.8218 0 41 9.17816 41 20.5Z"></path>
+          </mask>
+          <path
+            d="M18.3984 10V9C17.8462 9 17.3984 9.44771 17.3984 10H18.3984ZM23.3984 10H24.3984C24.3984 9.44771 23.9507 9 23.3984 9V10ZM23.3984 28.8968V29.8968C23.9507 29.8968 24.3984 29.4491 24.3984 28.8968H23.3984ZM17.3984 28.8968C17.3984 29.4491 17.8462 29.8968 18.3984 29.8968C18.9507 29.8968 19.3984 29.4491 19.3984 28.8968H17.3984ZM18.4999 27.8968C17.9476 27.8968 17.4999 28.3446 17.4999 28.8968C17.4999 29.4491 17.9476 29.8968 18.4999 29.8968V27.8968ZM26.7972 15.2491V14.2491C26.245 14.2491 25.7972 14.6969 25.7972 15.2491H26.7972ZM31.7972 15.2491H32.7972C32.7972 14.6969 32.3495 14.2491 31.7972 14.2491V15.2491ZM31.7972 28.8969V29.8969C32.3495 29.8969 32.7972 29.4492 32.7972 28.8969H31.7972ZM25.7972 28.8969C25.7972 29.4492 26.245 29.8969 26.7972 29.8969C27.3495 29.8969 27.7972 29.4492 27.7972 28.8969H25.7972ZM29.5 27.8969C28.9477 27.8969 28.5 28.3446 28.5 28.8969C28.5 29.4492 28.9477 29.8969 29.5 29.8969V27.8969ZM10 20.4982V19.4982C9.44771 19.4982 9 19.9459 9 20.4982H10ZM15 20.4982H16C16 19.9459 15.5523 19.4982 15 19.4982V20.4982ZM15 28.8968V29.8968C15.5523 29.8968 16 29.4491 16 28.8968H15ZM9 25.8968C9 26.4491 9.44771 26.8968 10 26.8968C10.5523 26.8968 11 26.4491 11 25.8968H9ZM10 27.8968C9.44771 27.8968 9 28.3445 9 28.8968C9 29.4491 9.44771 29.8968 10 29.8968V27.8968ZM10.5 31.5C9.94771 31.5 9.5 31.9477 9.5 32.5C9.5 33.0523 9.94771 33.5 10.5 33.5V31.5ZM31 33.5C31.5523 33.5 32 33.0523 32 32.5C32 31.9477 31.5523 31.5 31 31.5V33.5ZM18.3984 11H23.3984V9H18.3984V11ZM22.3984 10V28.8968H24.3984V10H22.3984ZM19.3984 28.8968V10H17.3984V28.8968H19.3984ZM23.3984 27.8968H18.4999V29.8968H23.3984V27.8968ZM26.7972 16.2491H31.7972V14.2491H26.7972V16.2491ZM30.7972 15.2491V28.8969H32.7972V15.2491H30.7972ZM27.7972 28.8969V15.2491H25.7972V28.8969H27.7972ZM31.7972 27.8969H29.5V29.8969H31.7972V27.8969ZM10 21.4982H15V19.4982H10V21.4982ZM14 20.4982V28.8968H16V20.4982H14ZM11 25.8968V20.4982H9V25.8968H11ZM15 27.8968H10V29.8968H15V27.8968ZM10.5 33.5H31V31.5H10.5V33.5ZM39 20.5C39 30.7173 30.7173 39 20.5 39V43C32.9264 43 43 32.9264 43 20.5H39ZM20.5 39C10.2827 39 2 30.7173 2 20.5H-2C-2 32.9264 8.07359 43 20.5 43V39ZM2 20.5C2 10.2827 10.2827 2 20.5 2V-2C8.07359 -2 -2 8.07359 -2 20.5H2ZM20.5 2C30.7173 2 39 10.2827 39 20.5H43C43 8.07359 32.9264 -2 20.5 -2V2Z"
+            fill="#F0465F"
+            mask="url(#path-1-inside-1_6651_7155)"
+          ></path>
+        </svg>
+      ),
+      content1: {
+        title: "Speed Optimization",
+        description: [
+          "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
+          "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
+          "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
+        ],
+      },
+      content2: {
+        title: "Website Speed Optimization",
+        description: [
+          "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
+          "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
+          "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
+        ],
+      },
+    },
+    {
+      icon: (
+        <svg
+          viewBox="0 0 41 41"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="icon icon--lg mr-0 fill-none min-h-full max-h-full min-w-full"
+          name="wux-seo"
+        >
+          <mask id="path-1-inside-1_6651_7155" fill="white">
+            <path d="M41 20.5C41 31.8218 31.8218 41 20.5 41C9.17816 41 0 31.8218 0 20.5C0 9.17816 9.17816 0 20.5 0C31.8218 0 41 9.17816 41 20.5Z"></path>
+          </mask>
+          <path
+            d="M18.3984 10V9C17.8462 9 17.3984 9.44771 17.3984 10H18.3984ZM23.3984 10H24.3984C24.3984 9.44771 23.9507 9 23.3984 9V10ZM23.3984 28.8968V29.8968C23.9507 29.8968 24.3984 29.4491 24.3984 28.8968H23.3984ZM17.3984 28.8968C17.3984 29.4491 17.8462 29.8968 18.3984 29.8968C18.9507 29.8968 19.3984 29.4491 19.3984 28.8968H17.3984ZM18.4999 27.8968C17.9476 27.8968 17.4999 28.3446 17.4999 28.8968C17.4999 29.4491 17.9476 29.8968 18.4999 29.8968V27.8968ZM26.7972 15.2491V14.2491C26.245 14.2491 25.7972 14.6969 25.7972 15.2491H26.7972ZM31.7972 15.2491H32.7972C32.7972 14.6969 32.3495 14.2491 31.7972 14.2491V15.2491ZM31.7972 28.8969V29.8969C32.3495 29.8969 32.7972 29.4492 32.7972 28.8969H31.7972ZM25.7972 28.8969C25.7972 29.4492 26.245 29.8969 26.7972 29.8969C27.3495 29.8969 27.7972 29.4492 27.7972 28.8969H25.7972ZM29.5 27.8969C28.9477 27.8969 28.5 28.3446 28.5 28.8969C28.5 29.4492 28.9477 29.8969 29.5 29.8969V27.8969ZM10 20.4982V19.4982C9.44771 19.4982 9 19.9459 9 20.4982H10ZM15 20.4982H16C16 19.9459 15.5523 19.4982 15 19.4982V20.4982ZM15 28.8968V29.8968C15.5523 29.8968 16 29.4491 16 28.8968H15ZM9 25.8968C9 26.4491 9.44771 26.8968 10 26.8968C10.5523 26.8968 11 26.4491 11 25.8968H9ZM10 27.8968C9.44771 27.8968 9 28.3445 9 28.8968C9 29.4491 9.44771 29.8968 10 29.8968V27.8968ZM10.5 31.5C9.94771 31.5 9.5 31.9477 9.5 32.5C9.5 33.0523 9.94771 33.5 10.5 33.5V31.5ZM31 33.5C31.5523 33.5 32 33.0523 32 32.5C32 31.9477 31.5523 31.5 31 31.5V33.5ZM18.3984 11H23.3984V9H18.3984V11ZM22.3984 10V28.8968H24.3984V10H22.3984ZM19.3984 28.8968V10H17.3984V28.8968H19.3984ZM23.3984 27.8968H18.4999V29.8968H23.3984V27.8968ZM26.7972 16.2491H31.7972V14.2491H26.7972V16.2491ZM30.7972 15.2491V28.8969H32.7972V15.2491H30.7972ZM27.7972 28.8969V15.2491H25.7972V28.8969H27.7972ZM31.7972 27.8969H29.5V29.8969H31.7972V27.8969ZM10 21.4982H15V19.4982H10V21.4982ZM14 20.4982V28.8968H16V20.4982H14ZM11 25.8968V20.4982H9V25.8968H11ZM15 27.8968H10V29.8968H15V27.8968ZM10.5 33.5H31V31.5H10.5V33.5ZM39 20.5C39 30.7173 30.7173 39 20.5 39V43C32.9264 43 43 32.9264 43 20.5H39ZM20.5 39C10.2827 39 2 30.7173 2 20.5H-2C-2 32.9264 8.07359 43 20.5 43V39ZM2 20.5C2 10.2827 10.2827 2 20.5 2V-2C8.07359 -2 -2 8.07359 -2 20.5H2ZM20.5 2C30.7173 2 39 10.2827 39 20.5H43C43 8.07359 32.9264 -2 20.5 -2V2Z"
+            fill="#F0465F"
+            mask="url(#path-1-inside-1_6651_7155)"
+          ></path>
+        </svg>
+      ),
+      content1: {
+        title: "Speed Optimization",
+        description: [
+          "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
+          "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
+          "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
+        ],
+      },
+      content2: {
+        title: "Website Speed Optimization",
+        description: [
+          "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
+          "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
+          "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
+        ],
+      },
+    },
+    {
+      icon: (
+        <svg
+          viewBox="0 0 41 41"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="icon icon--lg mr-0 fill-none min-h-full max-h-full min-w-full"
+          name="wux-seo"
+        >
+          <mask id="path-1-inside-1_6651_7155" fill="white">
+            <path d="M41 20.5C41 31.8218 31.8218 41 20.5 41C9.17816 41 0 31.8218 0 20.5C0 9.17816 9.17816 0 20.5 0C31.8218 0 41 9.17816 41 20.5Z"></path>
+          </mask>
+          <path
+            d="M18.3984 10V9C17.8462 9 17.3984 9.44771 17.3984 10H18.3984ZM23.3984 10H24.3984C24.3984 9.44771 23.9507 9 23.3984 9V10ZM23.3984 28.8968V29.8968C23.9507 29.8968 24.3984 29.4491 24.3984 28.8968H23.3984ZM17.3984 28.8968C17.3984 29.4491 17.8462 29.8968 18.3984 29.8968C18.9507 29.8968 19.3984 29.4491 19.3984 28.8968H17.3984ZM18.4999 27.8968C17.9476 27.8968 17.4999 28.3446 17.4999 28.8968C17.4999 29.4491 17.9476 29.8968 18.4999 29.8968V27.8968ZM26.7972 15.2491V14.2491C26.245 14.2491 25.7972 14.6969 25.7972 15.2491H26.7972ZM31.7972 15.2491H32.7972C32.7972 14.6969 32.3495 14.2491 31.7972 14.2491V15.2491ZM31.7972 28.8969V29.8969C32.3495 29.8969 32.7972 29.4492 32.7972 28.8969H31.7972ZM25.7972 28.8969C25.7972 29.4492 26.245 29.8969 26.7972 29.8969C27.3495 29.8969 27.7972 29.4492 27.7972 28.8969H25.7972ZM29.5 27.8969C28.9477 27.8969 28.5 28.3446 28.5 28.8969C28.5 29.4492 28.9477 29.8969 29.5 29.8969V27.8969ZM10 20.4982V19.4982C9.44771 19.4982 9 19.9459 9 20.4982H10ZM15 20.4982H16C16 19.9459 15.5523 19.4982 15 19.4982V20.4982ZM15 28.8968V29.8968C15.5523 29.8968 16 29.4491 16 28.8968H15ZM9 25.8968C9 26.4491 9.44771 26.8968 10 26.8968C10.5523 26.8968 11 26.4491 11 25.8968H9ZM10 27.8968C9.44771 27.8968 9 28.3445 9 28.8968C9 29.4491 9.44771 29.8968 10 29.8968V27.8968ZM10.5 31.5C9.94771 31.5 9.5 31.9477 9.5 32.5C9.5 33.0523 9.94771 33.5 10.5 33.5V31.5ZM31 33.5C31.5523 33.5 32 33.0523 32 32.5C32 31.9477 31.5523 31.5 31 31.5V33.5ZM18.3984 11H23.3984V9H18.3984V11ZM22.3984 10V28.8968H24.3984V10H22.3984ZM19.3984 28.8968V10H17.3984V28.8968H19.3984ZM23.3984 27.8968H18.4999V29.8968H23.3984V27.8968ZM26.7972 16.2491H31.7972V14.2491H26.7972V16.2491ZM30.7972 15.2491V28.8969H32.7972V15.2491H30.7972ZM27.7972 28.8969V15.2491H25.7972V28.8969H27.7972ZM31.7972 27.8969H29.5V29.8969H31.7972V27.8969ZM10 21.4982H15V19.4982H10V21.4982ZM14 20.4982V28.8968H16V20.4982H14ZM11 25.8968V20.4982H9V25.8968H11ZM15 27.8968H10V29.8968H15V27.8968ZM10.5 33.5H31V31.5H10.5V33.5ZM39 20.5C39 30.7173 30.7173 39 20.5 39V43C32.9264 43 43 32.9264 43 20.5H39ZM20.5 39C10.2827 39 2 30.7173 2 20.5H-2C-2 32.9264 8.07359 43 20.5 43V39ZM2 20.5C2 10.2827 10.2827 2 20.5 2V-2C8.07359 -2 -2 8.07359 -2 20.5H2ZM20.5 2C30.7173 2 39 10.2827 39 20.5H43C43 8.07359 32.9264 -2 20.5 -2V2Z"
+            fill="#F0465F"
+            mask="url(#path-1-inside-1_6651_7155)"
+          ></path>
+        </svg>
+      ),
+      content1: {
+        title: "Speed Optimization",
+        description: [
+          "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
+          "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
+          "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
+        ],
+      },
+      content2: {
+        title: "Website Speed Optimization",
+        description: [
+          "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
+          "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
+          "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
+        ],
+      },
+    },
+  ];
   return (
     <div>
-      <div className="text-3xl px-8 font-bold py-8">Cards Group</div>
-      <section className="grid grid-cols-1 gap-y-8 md:gap-x-8 px-8 md:grid-cols-2 xl:grid-cols-3 xl:px-36 xl:gap-x-4 2xl:px-72">
-        {[
-          {
-            content1: {
-              title: "Speed Optimization",
-              description: [
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-              ],
-            },
-            content2: {
-              title: "Website Speed Optimization",
-              description: [
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-              ],
-            },
-          },
-          {
-            content1: {
-              title: "Speed Optimization",
-              description: [
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-              ],
-            },
-            content2: {
-              title: "Website Speed Optimization",
-              description: [
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-              ],
-            },
-          },
-          {
-            content1: {
-              title: "Speed Optimization",
-              description: [
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-              ],
-            },
-            content2: {
-              title: "Website Speed Optimization",
-              description: [
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-              ],
-            },
-          },
-          {
-            content1: {
-              title: "Speed Optimization",
-              description: [
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-              ],
-            },
-            content2: {
-              title: "Website Speed Optimization",
-              description: [
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-              ],
-            },
-          },
-          {
-            content1: {
-              title: "Speed Optimization",
-              description: [
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-              ],
-            },
-            content2: {
-              title: "Website Speed Optimization",
-              description: [
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-                "Analyze your website's loading speed, identify bottlenecks, and implement optimization techniques.",
-              ],
-            },
-          },
-        ].map((card, index) => {
+      <section
+        className="bg-[#f4f7fa] grid min-h-[100vh] w-full
+        bg-red-4000 gap-4
+        md:bg-green-4000 md:grid-cols-2 md:px-32 md:py-16 md:gap-8
+        lg:bg-violet-4000 lg:grid-cols-3 lg:gap-x-8
+         xl:bg-yellow-4000 xl:px-72"
+      >
+        {services.map((card, index) => {
           return (
-            <Card
-              key={index}
-              content1={card.content1}
-              content2={card.content2}
-            />
+            // <div className="h-full w-full bg-cyan-500 m-1 border">
+            <Card key={index} card={card} />
+            // </div>
           );
         })}
       </section>
