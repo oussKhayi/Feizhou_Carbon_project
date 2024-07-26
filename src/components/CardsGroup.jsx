@@ -33,8 +33,6 @@ const CardsGroup = () => {
           "Feature Highlights: SEO",
           "SEO A/B tests",
           "Keyword Monitoring",
-          "Google Top 10 Tests",
-          "Traffic monetization",
         ],
       },
     },
@@ -59,19 +57,11 @@ const CardsGroup = () => {
       ),
       content1: {
         title: "Feature Highlights: Eco Certification",
-        description: [
-          "Analyze your website's loading speed.",
-          "Analyze your website's loading speed.",
-          "Analyze your website's loading speed.",
-        ],
+        description: ["Analyze your",   " website's loading speed."],
       },
       content2: {
         title: "Website Speed Optimization",
-        description: [
-          "Analyze your website's loading speed.",
-          "Analyze your website's loading speed.",
-          "Analyze your website's loading speed.",
-        ],
+        description: ["Analyze your",   " website's loading speed."],
       },
     },
     {
@@ -95,19 +85,11 @@ const CardsGroup = () => {
       ),
       content1: {
         title: "Speed Optimization",
-        description: [
-          "Analyze your website's loading speed.",
-          "Analyze your website's loading speed.",
-          "Analyze your website's loading speed.",
-        ],
+        description: ["Analyze your",   " website's loading speed."],
       },
       content2: {
         title: "Website Speed Optimization",
-        description: [
-          "Analyze your website's loading speed.",
-          "Analyze your website's loading speed.",
-          "Analyze your website's loading speed.",
-        ],
+        description: ["Analyze your",   " website's loading speed."],
       },
     },
     {
@@ -131,19 +113,11 @@ const CardsGroup = () => {
       ),
       content1: {
         title: "Speed Optimization",
-        description: [
-          "Analyze your website's loading speed.",
-          "Analyze your website's loading speed.",
-          "Analyze your website's loading speed.",
-        ],
+        description: ["Analyze your",   " website's loading speed."],
       },
       content2: {
         title: "Website Speed Optimization",
-        description: [
-          "Analyze your website's loading speed.",
-          "Analyze your website's loading speed.",
-          "Analyze your website's loading speed.",
-        ],
+        description: ["Analyze your",   " website's loading speed."],
       },
     },
     {
@@ -167,19 +141,11 @@ const CardsGroup = () => {
       ),
       content1: {
         title: "Speed Optimization",
-        description: [
-          "Analyze your website's loading speed.",
-          "Analyze your website's loading speed.",
-          "Analyze your website's loading speed.",
-        ],
+        description: ["Analyze your",   " website's loading speed."],
       },
       content2: {
         title: "Website Speed Optimization",
-        description: [
-          "Analyze your website's loading speed.",
-          "Analyze your website's loading speed.",
-          "Analyze your website's loading speed.",
-        ],
+        description: ["Analyze your",   " website's loading speed."],
       },
     },
   ];
@@ -188,7 +154,7 @@ const CardsGroup = () => {
       <section
         className="
         bg-[#f4f7fa] flex flex-col gap-6 w-full p-6
-        md:bg-green-4000 md:grid md:grid-cols-2 md:px-20 md:py-14 md:gap-8
+        md:bg-green-4000 md:grid md:grid-cols-1 lg:grid-cols-2 md:px-20 md:py-14 md:gap-8
         lg:bg-violet-4000 lg:px-36 lg:gap-x-8
          xl:bg-yellow-4000 xl:px-44 xl:grid xl:grid-cols-3"
       >
