@@ -8,12 +8,14 @@ import CardsGroup from "./components/CardsGroup";
 import OurServices from "./components/OurServices";
 import More from "./components/More";
 import Footer from "./components/Footer";
+import CarbonEmissionCalculator from "./components/CarbonEmissionCalculator";
 
 function App() {
   return (
     <>
       <HeroSection />
       <AboutSection />
+      {/* <CarbonEmissionCalculator /> */}
       <FeizouComConsists />
       <CardsGroup />
       <OurServices />

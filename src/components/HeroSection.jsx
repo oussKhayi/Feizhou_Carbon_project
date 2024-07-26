@@ -1,30 +1,37 @@
 import React, { useState } from "react";
 import axios from "axios";
 import feizhouCom from "../assets/feizhouCom.png";
+import ResultModal from "./ResultModal";
 
 const HeroSection = () => {
   const [inputValue, setInputValue] = useState("");
-  const [data, setData] = useState();
+  const [data, setData] = useState("");
+  const [error, setError] = useState("");
   const handleSearch = async () => {
     console.log("clicked");
     // search with axios :
-    const response = await axios.get(
-      `https://api.websitecarbon.com/site?url=${encodeURIComponent(
-        inputValue
-      )}`,
-      // headers with access origin :
-      {
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "GET",
-          "Access-Control-Allow-Headers": "Content-Type",
-          "Content-Type": "application/json",
-        },
+    try {
+      const response = await fetch(
+        `http://localhost:3001/carbon?url=${encodeURIComponent(inputValue)}`,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      const data = await response.json();
+      console.log("======================data=======================");
+      console.log(data);
+
+      if (data.error) {
+        setError(`Error: ${data.error.message}`);
+      } else {
+        const carbonEmissions = data.statistics.co2.total;
+        setData(`Carbon Emissions: ${carbonEmissions.toFixed(2)} gCO2`);
       }
-    );
-    console.log("response.data");
-    console.log(response.data);
-    setData(response.data);
+    } catch (error) {
+      setError(`Error: ${error.message}`);
+    }
   };
 
   return (
@@ -32,7 +39,7 @@ const HeroSection = () => {
       <div className="w-[100%] h-fit text-center pt-20 md:pt-52 flex flex-col items-center justify-center">
         <div id="titles" className="flex flex-col gap-y-4">
           <h1 className="hero-section text-3xl md:text-5xl font-bold text-white">
-            Website Checker
+            Website Carbon Checker
           </h1>
           <p className="hero-section text-md text-white px-3 md:px-0">
             Free online tool for quick web page audits.
@@ -55,10 +62,14 @@ const HeroSection = () => {
           >
             Get you results
           </button>
+          <ResultModal />
         </div>
         <p className="hero-section mt-5 text-[.9rem] px-8 text-gray-200">
           This site is protected by reCAPTCHA and the Google Privacy Policy and
           Terms of Service apply.
+        </p>
+        <p className="hero-section mt-5 text-[.9rem] px-8 text-gray-200">
+          Data: {data}
         </p>
         <div className="mt-6 md:mt-8 flex flex-col gap-y-2 md:gap-y-3 md:flex-row gap-x-4 p-4 items-center">
           <p className="hero-section text-[.8rem] text-gray-200">
