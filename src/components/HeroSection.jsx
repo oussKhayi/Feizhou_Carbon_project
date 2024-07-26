@@ -29,13 +29,13 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="md:px-32 pt-28 lg:py-16 bg-gradient-to-b from-[#8cc842] to-[#3d9b4a] min-w-[100%] min-h-[82dvh]">
+    <div className="hero-section md:px-32 pt-28 lg:py-16 bg-gradient-to-b from-[#8cc842] to-[#3d9b4a] min-w-[100%] min-h-[82dvh]">
       <div className="w-[100%] h-fit text-center pt-20 md:pt-52 flex flex-col items-center justify-center">
         <div id="titles" className="flex flex-col gap-y-4">
-          <h1 className="text-3xl md:text-5xl font-bold text-white">
+          <h1 className="hero-section text-3xl md:text-5xl font-bold text-white">
             Website Checker
           </h1>
-          <p className="text-md text-white px-3 md:px-0">
+          <p className="hero-section text-md text-white px-3 md:px-0">
             Free online tool for quick web page audits.
           </p>
         </div>
@@ -57,12 +57,12 @@ const HeroSection = () => {
             Get you results
           </button>
         </div>
-        <p className="mt-5 text-[.9rem] px-8 text-gray-200">
+        <p className="hero-section mt-5 text-[.9rem] px-8 text-gray-200">
           This site is protected by reCAPTCHA and the Google Privacy Policy and
           Terms of Service apply.
         </p>
         <div className="mt-6 md:mt-8 flex flex-col gap-y-2 md:gap-y-3 md:flex-row gap-x-4 p-4 items-center">
-          <p className="text-[.8rem] text-gray-200">
+          <p className="hero-section text-[.8rem] text-gray-200">
             {/* &copy; {new Date().getFullYear()} , */}
             Powered by
           </p>
@@ -73,7 +73,7 @@ const HeroSection = () => {
           >
             <img src={feizhouCom} alt="" width={155} srcset="" />
           </a>
-          <p className="text-[.8rem] text-gray-200">company</p>
+          <p className="hero-section text-[.8rem] text-gray-200">company</p>
         </div>
       </div>
     </div>

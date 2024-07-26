@@ -58,14 +58,14 @@ const OurServices = () => {
       </h1>
       <div className="services gap-4 gap-y-10 xl:gap-x-10 grid lg:grid-cols-2 bg-[#8fc7ff0]">
         <div className="service grid gap-y-3 lg:px-16 xl:px-0 bg-green-3000">
-          <p className="text-gray-700 bg-violet-3000 font-semibold">
+          <p className="text-gray-700 text-sm md:text-base bg-violet-3000 font-semibold">
             Integrating eco-friendly solutions to minimize the carbon footprint
             of the site and promote environmental sustainability.
           </p>
-          <p className="text-gray-800 relative">
+          <p className="text-gray-800 text-sm md:text-base ps-4 relative">
             We work with hosting providers that use renewable energy to ensure
             that your website minimizes its carbon footprint.
-            <span className="absolute -start-6 top-0.5">
+            <span className="absolute -start-1 top-0.5">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -108,11 +108,11 @@ const OurServices = () => {
               </svg>
             </span>
           </p>
-          <p className="text-gray-800 relative">
+          <p className="text-gray-800 text-sm md:text-base ps-4 relative">
             We offer consulting services to help you make your existing website
             more environmentally friendly. Our detailed audits identify areas
             where improvements can be made to reduce environmental impact.
-            <span className="absolute -start-6 top-0.5">
+            <span className="absolute -start-1 top-0.5">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -157,15 +157,15 @@ const OurServices = () => {
           </p>
         </div>
         <div className="service grid gap-y-3 lg:px-16 xl:px-0 bg-green-3000">
-          <p className="text-gray-700 bg-red-2000  font-semibold">
+          <p className="text-gray-700 text-sm md:text-base bg-red-2000  font-semibold">
             Eco-friendly website and application design using sustainable
             practices and technologies
           </p>
-          <p className="text-gray-800 relative">
+          <p className="text-gray-800 text-sm md:text-base ps-4 relative">
             Our sites are designed to be lightweight and optimized, reducing
             loading time and energy consumption. We use advanced techniques to
             optimize images, minimize code, and ensure optimal performance.{" "}
-            <span className="absolute -start-6 top-0.5">
+            <span className="absolute -start-1 top-0.5">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -208,11 +208,11 @@ const OurServices = () => {
               </svg>
             </span>
           </p>
-          <p className="text-gray-800 relative">
+          <p className="text-gray-800 text-sm md:text-base ps-4 relative">
             We favor clean designs and relevant content, reducing the amount of
             data to load and improving the user experience while being more
             environmentally friendly.{" "}
-            <span className="absolute -start-6 top-0.5">
+            <span className="absolute -start-1 top-0.5">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"

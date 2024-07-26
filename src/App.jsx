@@ -15,7 +15,7 @@ function App() {
       <HeroSection />
       <AboutSection />
       <FeizouComConsists />
-      {/* <CardsGroup /> */}
+      <CardsGroup />
       <OurServices />
       <More />
       <Footer />
