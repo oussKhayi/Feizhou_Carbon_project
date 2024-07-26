@@ -1,10 +1,15 @@
-.hero-section::selection{
-  background-color:#5656a6 ;
-  color: white;
+* {
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 *::selection {
   color: #fff;
   background-color: #6ab545;
+}
+.hero-section::selection {
+  background-color: #5656a6;
+  color: white;
 }
 .container1 {
   height: 100%;
@@ -42,7 +47,6 @@
   perspective: 1000px;
   z-index: 2;
   background-color: white;
-  
 }
 .back {
   line-height: 1.5em;

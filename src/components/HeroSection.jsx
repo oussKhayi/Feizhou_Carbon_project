@@ -19,7 +19,6 @@ const HeroSection = () => {
           "Access-Control-Allow-Methods": "GET",
           "Access-Control-Allow-Headers": "Content-Type",
           "Content-Type": "application/json",
-          // Origin: "*",
         },
       }
     );

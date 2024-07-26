@@ -5,7 +5,7 @@ const More = () => {
   return (
     <div
       className="flex flex-col items-center gap-y-8 p-8  bg-white  md:px-32
-      md:py-16
+      md:pt-16
       lg:px-12
       xl:px-72"
     >
