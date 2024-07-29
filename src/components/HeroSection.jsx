@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import feizhouCom from "../assets/feizhouCom.png";
 import ResultModal from "./ResultModal";
+import Modal from "./Modal";
 
 const HeroSection = () => {
   const [inputValue, setInputValue] = useState("");
@@ -45,7 +46,7 @@ const HeroSection = () => {
             Free online tool for quick web page audits.
           </p>
         </div>
-        <div
+        {/* <div
           id="inputs"
           className="flex flex-col lg:flex-row mt-8 gap-y-2 w-full px-8 md:px-0 sm:min-w-[45vw] md:w-[35dvw]"
         >
@@ -62,8 +63,9 @@ const HeroSection = () => {
           >
             Get you results
           </button>
-          <ResultModal />
-        </div>
+          <Modal handleSearch={handleSearch} />
+        </div> */}
+          <Modal />
         <p className="hero-section mt-5 text-[.9rem] px-8 text-gray-200">
           This site is protected by reCAPTCHA and the Google Privacy Policy and
           Terms of Service apply.
