@@ -30,7 +30,7 @@ const AboutSection = () => {
   "
     >
       <div className="image w-fit">
-        <img src={Hero} alt="" srcset="" className="rounded-2xl" />
+        <img src={Hero} alt="" srcSet="" className="rounded-2xl" />
       </div>
       <div className="content flex flex-col space-y-4 bg-green-3000 2xl:gap-y-0 w-fit">
         <div className="text-4xl flex gap-x-3 font-bold text-gray-800">

@@ -65,7 +65,7 @@ const HeroSection = () => {
           </button>
           <Modal handleSearch={handleSearch} />
         </div> */}
-          <Modal />
+        <Modal />
         <p className="hero-section mt-5 text-[.9rem] px-8 text-gray-200">
           This site is protected by reCAPTCHA and the Google Privacy Policy and
           Terms of Service apply.
@@ -83,7 +83,7 @@ const HeroSection = () => {
             target="_blank"
             className="text-white md:relative md:bottom-1.5"
           >
-            <img src={feizhouCom} alt="" width={155} srcset="" />
+            <img src={feizhouCom} alt="" width={155} srcSet="" />
           </a>
           <p className="hero-section text-[.8rem] text-gray-200">company</p>
         </div>

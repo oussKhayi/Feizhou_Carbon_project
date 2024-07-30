@@ -57,11 +57,11 @@ const CardsGroup = () => {
       ),
       content1: {
         title: "Feature Highlights: Eco Certification",
-        description: ["Analyze your",   " website's loading speed."],
+        description: ["Analyze your", " website's loading speed."],
       },
       content2: {
         title: "Website Speed Optimization",
-        description: ["Analyze your",   " website's loading speed."],
+        description: ["Analyze your", " website's loading speed."],
       },
     },
     {
@@ -85,11 +85,11 @@ const CardsGroup = () => {
       ),
       content1: {
         title: "Speed Optimization",
-        description: ["Analyze your",   " website's loading speed."],
+        description: ["Analyze your", " website's loading speed."],
       },
       content2: {
         title: "Website Speed Optimization",
-        description: ["Analyze your",   " website's loading speed."],
+        description: ["Analyze your", " website's loading speed."],
       },
     },
     {
@@ -113,11 +113,11 @@ const CardsGroup = () => {
       ),
       content1: {
         title: "Speed Optimization",
-        description: ["Analyze your",   " website's loading speed."],
+        description: ["Analyze your", " website's loading speed."],
       },
       content2: {
         title: "Website Speed Optimization",
-        description: ["Analyze your",   " website's loading speed."],
+        description: ["Analyze your", " website's loading speed."],
       },
     },
     {
@@ -141,31 +141,31 @@ const CardsGroup = () => {
       ),
       content1: {
         title: "Speed Optimization",
-        description: ["Analyze your",   " website's loading speed."],
+        description: ["Analyze your", " website's loading speed."],
       },
       content2: {
         title: "Website Speed Optimization",
-        description: ["Analyze your",   " website's loading speed."],
+        description: ["Analyze your", " website's loading speed."],
       },
     },
   ];
   return (
     <div>
-      <section
-        className="
-        bg-[#f4f7fa] flex flex-col gap-6 w-full p-6
-        md:bg-green-4000 md:grid md:grid-cols-1 lg:grid-cols-2 md:px-20 md:py-14 md:gap-8
-        lg:bg-violet-4000 lg:px-36 lg:gap-x-8
-         xl:bg-yellow-4000 xl:px-44 xl:grid xl:grid-cols-3"
-      >
-        {services.map((card, index) => {
-          return (
-            // <div className="h-full w-full bg-cyan-500 m-1 border">
-            <Card key={index} card={card} />
-            // </div>
-          );
-        })}
-      </section>
+      <div className="p-5 sm:p-10 md:p-16 bg-white">
+        <div
+          className="grid gap-4 px-2
+        grid-cols-1 bg-red-3000
+        sm:grid-cols-1 sm:bg-green-4000
+        md:grid-cols-2 md:bg-violet-4000
+        lg:grid-cols-2 lg:bg-cyan-4000
+        xl:grid-cols-3 xl:bg-orange-4000
+        "
+        >
+          {services.map((card, index) => {
+            return <Card card={card} key={index} />;
+          })}
+        </div>
+      </div>
     </div>
   );
 };

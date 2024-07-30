@@ -18,8 +18,8 @@ const OurServices = () => {
         y2="21.541"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset=".108" stop-color="#0d7044"></stop>
-        <stop offset=".433" stop-color="#11945a"></stop>
+        <stop offset=".108" stopColor="#0d7044"></stop>
+        <stop offset=".433" stopColor="#11945a"></stop>
       </linearGradient>
       <path
         fill="url(#HoiJCu43QtshzIrYCxOfCa_VFaz7MkjAiu0_gr1)"
@@ -34,8 +34,8 @@ const OurServices = () => {
         gradientTransform="rotate(134.999 21.287 38.873)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#2ac782"></stop>
-        <stop offset="1" stop-color="#21b876"></stop>
+        <stop offset="0" stopColor="#2ac782"></stop>
+        <stop offset="1" stopColor="#21b876"></stop>
       </linearGradient>
       <path
         fill="url(#HoiJCu43QtshzIrYCxOfCb_VFaz7MkjAiu0_gr2)"
@@ -82,8 +82,8 @@ const OurServices = () => {
                   y2="21.541"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop offset=".108" stop-color="#0d7044"></stop>
-                  <stop offset=".433" stop-color="#11945a"></stop>
+                  <stop offset=".108" stopColor="#0d7044"></stop>
+                  <stop offset=".433" stopColor="#11945a"></stop>
                 </linearGradient>
                 <path
                   fill="url(#HoiJCu43QtshzIrYCxOfCa_VFaz7MkjAiu0_gr1)"
@@ -98,8 +98,8 @@ const OurServices = () => {
                   gradientTransform="rotate(134.999 21.287 38.873)"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop offset="0" stop-color="#2ac782"></stop>
-                  <stop offset="1" stop-color="#21b876"></stop>
+                  <stop offset="0" stopColor="#2ac782"></stop>
+                  <stop offset="1" stopColor="#21b876"></stop>
                 </linearGradient>
                 <path
                   fill="url(#HoiJCu43QtshzIrYCxOfCb_VFaz7MkjAiu0_gr2)"
@@ -129,8 +129,8 @@ const OurServices = () => {
                   y2="21.541"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop offset=".108" stop-color="#0d7044"></stop>
-                  <stop offset=".433" stop-color="#11945a"></stop>
+                  <stop offset=".108" stopColor="#0d7044"></stop>
+                  <stop offset=".433" stopColor="#11945a"></stop>
                 </linearGradient>
                 <path
                   fill="url(#HoiJCu43QtshzIrYCxOfCa_VFaz7MkjAiu0_gr1)"
@@ -145,8 +145,8 @@ const OurServices = () => {
                   gradientTransform="rotate(134.999 21.287 38.873)"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop offset="0" stop-color="#2ac782"></stop>
-                  <stop offset="1" stop-color="#21b876"></stop>
+                  <stop offset="0" stopColor="#2ac782"></stop>
+                  <stop offset="1" stopColor="#21b876"></stop>
                 </linearGradient>
                 <path
                   fill="url(#HoiJCu43QtshzIrYCxOfCb_VFaz7MkjAiu0_gr2)"
@@ -182,8 +182,8 @@ const OurServices = () => {
                   y2="21.541"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop offset=".108" stop-color="#0d7044"></stop>
-                  <stop offset=".433" stop-color="#11945a"></stop>
+                  <stop offset=".108" stopColor="#0d7044"></stop>
+                  <stop offset=".433" stopColor="#11945a"></stop>
                 </linearGradient>
                 <path
                   fill="url(#HoiJCu43QtshzIrYCxOfCa_VFaz7MkjAiu0_gr1)"
@@ -198,8 +198,8 @@ const OurServices = () => {
                   gradientTransform="rotate(134.999 21.287 38.873)"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop offset="0" stop-color="#2ac782"></stop>
-                  <stop offset="1" stop-color="#21b876"></stop>
+                  <stop offset="0" stopColor="#2ac782"></stop>
+                  <stop offset="1" stopColor="#21b876"></stop>
                 </linearGradient>
                 <path
                   fill="url(#HoiJCu43QtshzIrYCxOfCb_VFaz7MkjAiu0_gr2)"
@@ -229,8 +229,8 @@ const OurServices = () => {
                   y2="21.541"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop offset=".108" stop-color="#0d7044"></stop>
-                  <stop offset=".433" stop-color="#11945a"></stop>
+                  <stop offset=".108" stopColor="#0d7044"></stop>
+                  <stop offset=".433" stopColor="#11945a"></stop>
                 </linearGradient>
                 <path
                   fill="url(#HoiJCu43QtshzIrYCxOfCa_VFaz7MkjAiu0_gr1)"
@@ -245,8 +245,8 @@ const OurServices = () => {
                   gradientTransform="rotate(134.999 21.287 38.873)"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop offset="0" stop-color="#2ac782"></stop>
-                  <stop offset="1" stop-color="#21b876"></stop>
+                  <stop offset="0" stopColor="#2ac782"></stop>
+                  <stop offset="1" stopColor="#21b876"></stop>
                 </linearGradient>
                 <path
                   fill="url(#HoiJCu43QtshzIrYCxOfCb_VFaz7MkjAiu0_gr2)"
