@@ -45,7 +45,7 @@ const OurServices = () => {
   );
   return (
     <div
-      className="px-8 bg-[#f4f7fa] grid gap-y-4 lg:gap-y-8
+      className="p-8 bg-[#f4f7fa] grid gap-y-4 lg:gap-y-8
       md:px-32
       md:py-16
       lg:px-12

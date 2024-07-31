@@ -22,7 +22,7 @@ const Footer = () => {
                 <a className="flex items-center justify-center font-medium text-white title-font md:justify-start">
                   <img src={Logo} alt="" width={null} className="max-w-72" />
                 </a>
-                <div className="flex justify-start">
+                {/* <div className="flex justify-start">
                   <a href="#" className="w-6 mx-1">
                     <svg
                       className="fill-current cursor-pointer text-white"
@@ -88,7 +88,7 @@ const Footer = () => {
                       />
                     </svg>
                   </a>
-                </div>
+                </div> */}
               </div>
               <div className="w-full px-4 lg:w-1/4 text-center">
                 <h2 className="mb-3 text-md font-semibold tracking-widest text-white uppercase title-font">

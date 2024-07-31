@@ -9,7 +9,7 @@ const AboutSection = () => {
       grid
       gap-y-8
       px-4
-      py-10
+      py-4
       
       md:bg-red-40000
       md:px-32

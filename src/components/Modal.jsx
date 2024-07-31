@@ -12,7 +12,9 @@ export default function Modal() {
       setLoading(true);
       setError("");
       const response = await fetch(
-        `http://localhost:3001/carbon?url=${encodeURIComponent(inputValue)}`,
+        `http://192.168.11.106:3001/carbon?url=${encodeURIComponent(
+          inputValue
+        )}`,
         {
           headers: {
             "Content-Type": "application/json",

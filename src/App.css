@@ -23,7 +23,7 @@
   transform-style: preserve-3d;
   transform: rotateY(180deg);
   perspective: 1000px;
-  box-shadow: inset 0px 0px 90px 4px #f7f7f7;
+  box-shadow: inset 0px 0px 90px 4px #dddddd;
 }
 .card-parent:hover .card-container {
   -webkit-transform: rotateY(180deg);

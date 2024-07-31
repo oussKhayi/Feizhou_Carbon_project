@@ -6,7 +6,7 @@ const FeizouComConsists = () => {
     <section
       className="
       flex flex-col bg-[#f4f7fa] items-center
-      md:flex-row md:px-32 py-16
+      md:flex-row md:px-32 pb-10 
       xl:px-72
   "
     >
