@@ -1,3 +1,11 @@
+*::selection {
+  color: white;
+  background-color: #3e9b4a;
+}
+.hero-section::selection {
+  color: white;
+  background-color: #5656a6;
+}
 .card-parent:hover .card-container {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);

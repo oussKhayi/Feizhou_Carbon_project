@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "../assets/hero.png";
+import BookDemoButton from "./BookDemoButton";
 const AboutSection = () => {
   return (
     <section
@@ -29,7 +30,7 @@ const AboutSection = () => {
 
   "
     >
-      <div className="image w-fit">
+      <div className="image w-fit bg-red-2000 items-center flex">
         <img src={Hero} alt="" srcSet="" className="rounded-2xl" />
       </div>
       <div className="content flex flex-col space-y-4 bg-green-3000 2xl:gap-y-0 w-fit">
@@ -40,7 +41,7 @@ const AboutSection = () => {
             Com
           </div>
         </div>
-        <p className="text-base lg:text-base md:text-base min-w-full text-gray-700">
+        <p className="text-lg md:text-md min-w-full text-gray-700">
           FeizhouCom is the first agency in Morocco to offer green website
           creation services. Our commitment to environmental sustainability is
           demonstrated through our innovative approach to minimizing the carbon
@@ -50,9 +51,7 @@ const AboutSection = () => {
           green certification badges.
         </p>
         <div className="button">
-          <button className="text-sm px-8 py-3 bg-[#5656a6] text-white rounded-3xl">
-            Book a free demo
-          </button>
+          <BookDemoButton />
         </div>
       </div>
     </section>

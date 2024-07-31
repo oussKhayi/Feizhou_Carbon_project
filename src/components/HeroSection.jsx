@@ -70,12 +70,8 @@ const HeroSection = () => {
           This site is protected by reCAPTCHA and the Google Privacy Policy and
           Terms of Service apply.
         </p>
-        <p className="hero-section mt-5 text-[.9rem] px-8 text-gray-200">
-          Data: {data}
-        </p>
         <div className="mt-6 md:mt-8 flex flex-col gap-y-2 md:gap-y-3 md:flex-row gap-x-4 p-4 items-center">
           <p className="hero-section text-[.8rem] text-gray-200">
-            {/* &copy; {new Date().getFullYear()} , */}
             Powered by
           </p>
           <a

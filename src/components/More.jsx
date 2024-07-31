@@ -1,5 +1,6 @@
 import React from "react";
-import handsImg  from "./../assets/hands.png" 
+import handsImg from "./../assets/hands.png";
+import BookDemoButton from "./BookDemoButton";
 
 const More = () => {
   return (
@@ -15,9 +16,7 @@ const More = () => {
         obligation, straightforward and personal.
       </p>
       <div className="button">
-        <button className="text-sm px-8 py-3 bg-[#5656a6] text-white rounded-3xl">
-          Book a free demo
-        </button>
+        <BookDemoButton />
       </div>
       <div className="hands">
         <img src={handsImg} width={200} alt="" />

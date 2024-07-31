@@ -14,17 +14,18 @@ const FeizouComConsists = () => {
         <img
           src={LogoSolo}
           alt="Feizoucom Logo"
-          className="max-w-[20rem] md:max-w-[19rem] h-auto"
+          className="max-w-[15rem] md:max-w-[19rem] h-auto"
         />
       </div>
       <div className="content text-center  flex flex-col space-y-2">
-        <h1 className="text-xl text-start ps-7 font-semibold text-gray-900">
-          FeizouCom consists of six pillars:
+        <h1 className="text-2xl text-start ps-7 font-semibold text-gray-900">
+          FeizhouCom Solution consists of 5 pillars:{" "}
         </h1>
-        <p className="text-base text-start ps-7 p-2 text-gray-700">
-          In 6 essential tool pillars, the Ryte Platform delivers automated and
-          prioritized recommendations that enable you to bring the perfect
-          Website User Experience (WUX) live on your website.{" "}
+        <p className="text-lg text-start ps-7 p-2 text-gray-700">
+          Optimization of carbon transmission up to 80% and Minimizing Energy
+          Consumption, ü Improvement of up to 50% in loading times, Employ
+          modern security practices and technologies, we create a more appealing
+          Design, easy to navigate, and optimize web seo.
         </p>
       </div>
     </section>

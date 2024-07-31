@@ -11,16 +11,18 @@ const Card = ({ card }) => {
           </div>
           <p className="text-xl font-semibold">{card.content1.title}</p>
           <p className="text-balance">{card.content1.description}</p>
+          <p className="underline text-blue-500">See what's inside</p>
         </div>
         {/* ----------------------------------   */}
         {/* front */}
         <div className="front min-h-full w-full text-center absolute p-9 top-0 start-0 bg-white rounded-2xl">
-          <div className="content min-h-full w-full grid gap-y-1">
+          <div className="content min-h-full w-full grid gap-y-6">
             <div className="w-full text-center">
               <div className="icon w-[4rem] mx-auto">{card?.icon}</div>
             </div>
             <p className="text-xl font-semibold">{card.content1.title}</p>
             <p className="text-balance">{card.content1.description}</p>
+            <p className="underline text-blue-500">See what's inside</p>
           </div>
         </div>
         {/* back */}
@@ -30,9 +32,9 @@ const Card = ({ card }) => {
               <div className="icon w-[4rem] mx-auto">{card?.icon}</div>
             </div>
             <p className="text-xl font-semibold">{card.content1.title}</p>
-            <ul className="text-balance space-y-2">
+            <ul className="text-balance list-disc space-y-2 xs:ps-4 md:ps-16">
               {card.content2.description.map((item, i) => {
-                return <li key={i}>{item}</li>;
+                return <li key={i} className="text-start">{item}</li>;
               })}
             </ul>
           </div>
@@ -44,7 +46,8 @@ const Card = ({ card }) => {
 
 export default Card;
 
-{/* <div className="parent">
+{
+  /* <div className="parent">
   <div class="container1 bg-violet-4000 min-h-[36dvh] md:h-auto">
     <div class="front side rounded-3xl">
       <div class="content-card flex flex-col gap-y-4 md:gap-y-8 items-center min-w-full min-h-full">
@@ -65,4 +68,5 @@ export default Card;
       </div>
     </div>
   </div>
-</div>; */}
+</div>; */
+}
