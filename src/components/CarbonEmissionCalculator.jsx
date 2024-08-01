@@ -11,8 +11,13 @@ const CarbonEmissionCalculator = () => {
     setError("");
 
     try {
+      console.log('====================================');
+      console.log(import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
+      console.log('====================================');
       const response = await fetch(
-        `http://localhost:3001/carbon?url=${encodeURIComponent(websiteUrl)}`,
+        `${
+          import.meta.env.VITE_WEB3FORMS_ACCESS_KEY
+        }/carbon?url=${encodeURIComponent(websiteUrl)}`,
         {
           headers: {
             "Content-Type": "application/json",

@@ -25,7 +25,11 @@ const SectionComponent = ({
       <p className="text-xl font-extralight text-gray-800">{description}</p>
     </div>
     <div className="md:w-1/2 p-6">
-      <img src={imageUrl} alt={imageAlt} className="w-full rounded-lg" />
+      <img
+        src={imageUrl}
+        alt={"Feizhoucom"}
+        className="w-full rounded-lg not-drag"
+      />
     </div>
     <div className="w-full items-center justify-start px-5 gap-2 flex md:hidden">
       <h1 className="text-3xl text-gray-700 font-bold pb-4">0{id}</h1>

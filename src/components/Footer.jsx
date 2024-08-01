@@ -20,7 +20,12 @@ const Footer = () => {
             <div className="w-full bg-red-3000 flex justify-center u lg:justify-around flex-wrap md:flex-nowrap gap-x-10">
               <div className="bg-yellow-3000 grid">
                 <a className="flex items-center justify-center font-medium text-white title-font md:justify-start">
-                  <img src={Logo} alt="" width={null} className="max-w-72" />
+                  <img
+                    src={Logo}
+                    alt="Feizhoucom"
+                    width={null}
+                    className="max-w-72 not-drag"
+                  />
                 </a>
                 {/* <div className="flex justify-start">
                   <a href="#" className="w-6 mx-1">

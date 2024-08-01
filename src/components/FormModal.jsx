@@ -22,7 +22,7 @@ export function FormModal() {
           <img
             src="/image/exclamation.svg"
             alt="exclamation"
-            className="w-10 h-10"
+            className="w-10 h-10 not-drag"
           />
           <IconButton
             color="gray"

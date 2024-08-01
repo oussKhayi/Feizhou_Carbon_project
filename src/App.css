@@ -40,3 +40,12 @@
 .content {
   transform: translateZ(50px) scale(0.8);
 }
+
+/*Drag image not allowed */
+.not-drag {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}

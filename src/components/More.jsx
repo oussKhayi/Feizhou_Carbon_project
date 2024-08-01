@@ -19,7 +19,7 @@ const More = () => {
         <BookDemoButton />
       </div>
       <div className="hands">
-        <img src={handsImg} width={200} alt="" />
+        <img src={handsImg} width={200} alt="Feizhoucom" className="not-drag" />
       </div>
     </div>
   );

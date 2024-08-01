@@ -11,60 +11,15 @@ import {
 import { useState } from "react";
 import Logo from "./../assets/Logo-solo.png";
 
-const BookDemoButton = () => {
+const BookDemoModal = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen((cur) => !cur);
-  // handle submit form :
-  const [result, setResult] = useState("");
 
-  const onSubmit = async (event) => {
-    event.preventDefault();
-    console.log("====================================");
-    console.log({ access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY });
-    console.log("====================================");
-    // setResult("Sending....");
-    const formData = new FormData(event.target);
-    console.log("\n\n\n==================event.target==================");
-    console.log(event.target);
-    console.log("\n\n\n=============formData=======================");
-    console.log(formData);
-    console.log("====================================");
-    formData.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
-    let body = Object.fromEntries(formData);
-    body = JSON.stringify(body);
-
-    // submit form :
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body,
-    });
-
-    const data = await response.json();
-
-    if (data.success) {
-      setResult("Form Submitted Successfully");
-      event.target.reset();
-    } else {
-      console.log("Error", data);
-      setResult(data.message);
-    }
-  };
   return (
     <>
-      <button
-        onClick={handleOpen}
-        className="text-lg px-8 py-3 bg-[#5656a6] text-white rounded-3xl hover:scale-105 hover:bg-[#6a6acc]  transition-all duration-300"
-      >
-        Book a free demo
-      </button>
-      {/* <section className="grid place-items-center h-screen"> */}
       <Dialog className="p-4" size="md" open={open} handler={handleOpen}>
         <DialogHeader className="justify-between">
-          <img src={Logo} alt="exclamation" className="w-16 h-16 not-drag" />
+          <img src={Logo} alt="Feizhoucom" className="w-16 h-16 not-drag" />
           <IconButton
             color="gray"
             size="sm"
@@ -88,7 +43,7 @@ const BookDemoButton = () => {
           </IconButton>
         </DialogHeader>
         <DialogBody className="overflow-y-scrolls">
-          <form onSubmit={onSubmit}>
+          <div>
             <Typography
               variant="small"
               className="mb-2 text-gray-600 font-normal"
@@ -97,14 +52,12 @@ const BookDemoButton = () => {
             </Typography>
             <div className="flex flex-col md:flex-row gap-2 mb-3">
               <Input
-                name="name"
                 color="gray"
                 label="Name"
                 size="lg"
                 className="w-full md:max-w-lg"
               />
               <Input
-                name="email"
                 color="gray"
                 label="Mail address"
                 size="lg"
@@ -113,14 +66,12 @@ const BookDemoButton = () => {
             </div>
             <div className="flex flex-col md:flex-row gap-2 mb-3">
               <Input
-                name="company"
                 color="gray"
                 label="Company"
                 size="lg"
                 className="w-full md:max-w-lg"
               />
               <Input
-                name="phone"
                 color="gray"
                 label="Phone Number"
                 size="lg"
@@ -129,7 +80,6 @@ const BookDemoButton = () => {
             </div>{" "}
             <div className="flex flex-col md:flex-row gap-2 mb-3">
               <Input
-                name="subject"
                 color="gray"
                 label="Subject"
                 size="lg"
@@ -138,8 +88,6 @@ const BookDemoButton = () => {
             </div>
             <div className="flex flex-col md:flex-row gap-2 mb-3">
               <Textarea
-                name="description"
-                rows={6}
                 color="gray"
                 label="Description"
                 // size="lg"
@@ -149,15 +97,14 @@ const BookDemoButton = () => {
                 I understant, reset settings
               </Button> */}
             </div>{" "}
-            <Button type="submit" color="green" className="w-full">
+            <Button color="green" className="w-full">
               Submit
             </Button>
-          </form>
+          </div>
         </DialogBody>
       </Dialog>
-      {/* </section> */}
     </>
   );
 };
 
-export default BookDemoButton;
+export default BookDemoModal;

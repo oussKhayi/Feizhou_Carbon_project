@@ -71,15 +71,19 @@ const HeroSection = () => {
           Terms of Service apply.
         </p>
         <div className="mt-6 md:mt-8 flex flex-col gap-y-2 md:gap-y-3 md:flex-row gap-x-4 p-4 items-center">
-          <p className="hero-section text-[.8rem] text-gray-200">
-            Powered by
-          </p>
+          <p className="hero-section text-[.8rem] text-gray-200">Powered by</p>
           <a
             href="https://FeizhouCom.com"
             target="_blank"
             className="text-white md:relative md:bottom-1.5"
           >
-            <img src={feizhouCom} alt="" width={155} srcSet="" />
+            <img
+              src={feizhouCom}
+              alt="Feizhoucom"
+              width={155}
+              srcSet=""
+              className="not-drag"
+            />
           </a>
           <p className="hero-section text-[.8rem] text-gray-200">company</p>
         </div>
