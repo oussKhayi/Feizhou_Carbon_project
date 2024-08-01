@@ -110,7 +110,11 @@ const Footer = () => {
                     </a>
                   </li>
                   <li className="mt-3">
-                    <a className="text-white cursor-pointer hover:border-b hover:text-white">
+                    <a
+                      href="https://feizhoucom.com/carriere"
+                      target="_blank"
+                      className="text-white cursor-pointer hover:border-b hover:text-white"
+                    >
                       Careers
                     </a>
                   </li>
