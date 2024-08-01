@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { HiMiniComputerDesktop, HiMiniServerStack } from "react-icons/hi2";
+
 import {
   Button,
   Dialog,
@@ -33,11 +35,7 @@ export default function Modal() {
         }
       );
       const result = await response.json();
-      console.log("====================================");
-      console.log(result);
-      console.log("====================================");
       setLoading(false);
-
       if (result.error) {
         setError(`Error: ${result.error.message}`);
         setData(null);
@@ -66,7 +64,7 @@ export default function Modal() {
         />
         <button
           onClick={() => {
-            handleSearch();
+            // handleSearch();
             handleOpen();
           }}
           className="w-full py-3 text-white bg-[#5656a6] rounded-3xl lg:rounded-s-none lg:w-fit text-nowrap px-8 font-semibold"
@@ -99,7 +97,7 @@ export default function Modal() {
             </svg>
           </IconButton>
         </DialogHeader>
-        <DialogBody className="overflow-y-scroll">
+        <DialogBody>
           <Typography color="blue-gray" className="mb-1 font-bold"></Typography>
           <Typography
             variant="paragraph"
@@ -108,371 +106,120 @@ export default function Modal() {
             Our team gladely colaborate in reduction carbon emission in the
             global digital sphere.
           </Typography>
+
+          {loading ? (
+            <div className="flex loading-container p-8">
+              <HiMiniComputerDesktop size={120} />
+              <div className="w-full flex items-center">
+                <div className="h-1.5 w-full bg-[#d3ff9d] overflow-hidden">
+                  <div className="animate-progress w-full h-full bg-[#5dc22f] origin-left-right"></div>
+                </div>
+              </div>
+              <HiMiniServerStack size={120} />
+            </div>
+          ) : error ? (
+            <p className="text-red-500 text-lg leading-relaxed">
+              Something went wrong, Please try again!
+            </p>
+          ) : data ? (
+            <div>
+              <div className="border p-6 rounded-lg shadow-lg bg-green-500 text-green-50">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                  <div className="space-y-2">
+                    <h3 className="text-2xl font-bold">Carbon Footprint</h3>
+                    <p className="text-4xl font-bold">
+                      {(
+                        data.statistics.co2.grid.grams +
+                        data.statistics.co2.renewable.grams
+                      ).toFixed(2)}{" "}
+                      gCO2
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-2xl font-bold">Energy Usage</h3>
+                    <p className="text-4xl font-bold">
+                      {data.statistics.energy.toFixed(6)} kWh
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-2xl font-bold">Rating</h3>
+                    <p className="text-4xl font-bold">{data.rating}</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-4">
+                <h2 className="text-2xl font-bold mb-4">Detailed Statistics</h2>
+                <div className="overflow-x-auto">
+                  <table className="w-full table-auto border-collapse">
+                    <thead>
+                      <tr className="bg-gray-200">
+                        <th className="px-4 py-2 text-left">Metric</th>
+                        <th className="px-4 py-2 text-left">Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b">
+                        <td className="px-4 py-2">URL</td>
+                        <td className="px-4 py-2">{data.url}</td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="px-4 py-2">Carbon Footprint (Grid)</td>
+                        <td className="px-4 py-2">
+                          {data.statistics.co2.grid.grams.toFixed(2)} gCO2
+                        </td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="px-4 py-2">
+                          Carbon Footprint (Renewable)
+                        </td>
+                        <td className="px-4 py-2">
+                          {data.statistics.co2.renewable.grams.toFixed(2)} gCO2
+                        </td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="px-4 py-2">Energy Usage</td>
+                        <td className="px-4 py-2">
+                          {data.statistics.energy.toFixed(6)} kWh
+                        </td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="px-4 py-2">Cleaner Than</td>
+                        <td className="px-4 py-2">
+                          {(data.cleanerThan * 100).toFixed(2)}%
+                        </td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="px-4 py-2">Rating</td>
+                        <td className="px-4 py-2">{data.rating}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <p>No results</p>
+          )}
           <div>
-            <Typography
-              variant="small"
-              className="mt-6 mb-2 text-gray-600 font-normal"
-            >
-              We're just loading your results.
-            </Typography>
-            <div className="flex flex-col md:flex-row gap-2">
-              {/* <Input
-                color="gray"
-                label="Reset settings"
-                size="lg"
-                className="w-full md:max-w-lg"
-              /> */}
-              <Button color="red" className="w-full lg:max-w-[15rem]">
+            <div className="flex flex-col md:flex-row justify-between">
+              <Typography
+                variant="small"
+                className="mt-6 mb-2 text-gray-600 font-normal"
+              >
+                We're just loading your results..
+              </Typography>
+              <Button
+                onClick={handleOpen}
+                color="red"
+                className="w-full max-h-10 lg:max-w-[12rem]"
+              >
                 Cancel
               </Button>
             </div>
           </div>
         </DialogBody>
       </Dialog>
-      {loading ? (
-        <div className="flex items-center justify-center h-full">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="xMidYMid"
-            width={165}
-            height={165}
-            style={{
-              shapeRendering: "auto",
-              display: "block",
-              background: "rgb(255, 255, 255)",
-            }}
-          >
-            <g data-idx={1}>
-              <circle
-                fill="#3e9b4a"
-                r={2}
-                cy="63.41047668457031"
-                cx="-0.5"
-                data-idx={2}
-              ></circle>
-              <circle
-                fill="#8cc842"
-                r={2}
-                cy="60.197025299072266"
-                cx="4.5"
-                data-idx={4}
-              ></circle>
-              <circle
-                fill="#3e9b4a"
-                r={2}
-                cy="55.4295654296875"
-                cx="9.5"
-                data-idx={6}
-              ></circle>
-              <circle
-                fill="#8cc842"
-                r={2}
-                cy="49.52984619140625"
-                cx="14.5"
-                data-idx={8}
-              ></circle>
-              <circle
-                fill="#3e9b4a"
-                r={2}
-                cy="43.739749908447266"
-                cx="19.5"
-                data-idx={10}
-              ></circle>
-              <circle
-                fill="#8cc842"
-                r={2}
-                cy="39.20600128173828"
-                cx="24.5"
-                data-idx={12}
-              ></circle>
-              <circle
-                fill="#3e9b4a"
-                r={2}
-                cy="36.22478485107422"
-                cx="29.5"
-                data-idx={14}
-              ></circle>
-              <circle
-                fill="#8cc842"
-                r={2}
-                cy="34.59037399291992"
-                cx="34.5"
-                data-idx={16}
-              ></circle>
-              <circle
-                fill="#3e9b4a"
-                r={2}
-                cy="34.01173400878906"
-                cx="39.5"
-                data-idx={18}
-              ></circle>
-              <circle
-                fill="#8cc842"
-                r={2}
-                cy="34.28458023071289"
-                cx="44.5"
-                data-idx={20}
-              ></circle>
-              <circle
-                fill="#3e9b4a"
-                r={2}
-                cy="35.522674560546875"
-                cx="49.5"
-                data-idx={22}
-              ></circle>
-              <circle
-                fill="#8cc842"
-                r={2}
-                cy="38.005340576171875"
-                cx="54.5"
-                data-idx={24}
-              ></circle>
-              <circle
-                fill="#3e9b4a"
-                r={2}
-                cy="41.9981803894043"
-                cx="59.5"
-                data-idx={26}
-              ></circle>
-              <circle
-                fill="#8cc842"
-                r={2}
-                cy="47.442256927490234"
-                cx="64.5"
-                data-idx={28}
-              ></circle>
-              <circle
-                fill="#3e9b4a"
-                r={2}
-                cy="53.468544006347656"
-                cx="69.5"
-                data-idx={30}
-              ></circle>
-              <circle
-                fill="#8cc842"
-                r={2}
-                cy="58.721473693847656"
-                cx="74.5"
-                data-idx={32}
-              ></circle>
-              <circle
-                fill="#3e9b4a"
-                r={2}
-                cy="62.47101593017578"
-                cx="79.5"
-                data-idx={34}
-              ></circle>
-              <circle
-                fill="#8cc842"
-                r={2}
-                cy="64.74203491210938"
-                cx="84.5"
-                data-idx={36}
-              ></circle>
-              <circle
-                fill="#3e9b4a"
-                r={2}
-                cy="65.81427001953125"
-                cx="89.5"
-                data-idx={38}
-              ></circle>
-              <circle
-                fill="#8cc842"
-                r={2}
-                cy="65.9573974609375"
-                cx="94.5"
-                data-idx={40}
-              ></circle>
-              <circle
-                fill="#3e9b4a"
-                r={2}
-                cy="65.23326110839844"
-                cx="99.5"
-                data-idx={42}
-              ></circle>
-              <g data-idx={44} />
-            </g>
-            <text
-              data-watermark="true"
-              textAnchor="middle"
-              dominantBaseline="middle"
-              strokeOpacity="0.1"
-              fill="black"
-              fillOpacity="0.1"
-              stroke="white"
-              strokeWidth={1}
-              fontSize={5.0}
-              x={50}
-              y={50}
-              data-idx={45}
-              style={{ opacity: 1, fontSize: 5 }}
-            >
-              LOADING.IO
-            </text>
-          </svg>
-        </div>
-      ) : error ? (
-        <p className="text-red-500 text-lg leading-relaxed">
-          Something went wrong, Please try again!
-        </p>
-      ) : data ? (
-        <div>
-          <div className="border p-6 rounded-lg shadow-lg bg-green-500 text-green-50">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-              <div className="space-y-2">
-                <h3 className="text-2xl font-bold">Carbon Footprint</h3>
-                <p className="text-4xl font-bold">
-                  {(
-                    data.statistics.co2.grid.grams +
-                    data.statistics.co2.renewable.grams
-                  ).toFixed(2)}{" "}
-                  gCO2
-                </p>
-              </div>
-              <div className="space-y-2">
-                <h3 className="text-2xl font-bold">Energy Usage</h3>
-                <p className="text-4xl font-bold">
-                  {data.statistics.energy.toFixed(6)} kWh
-                </p>
-              </div>
-              <div className="space-y-2">
-                <h3 className="text-2xl font-bold">Rating</h3>
-                <p className="text-4xl font-bold">{data.rating}</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-4">
-            <h2 className="text-2xl font-bold mb-4">Detailed Statistics</h2>
-            <div className="overflow-x-auto">
-              <table className="w-full table-auto border-collapse">
-                <thead>
-                  <tr className="bg-gray-200">
-                    <th className="px-4 py-2 text-left">Metric</th>
-                    <th className="px-4 py-2 text-left">Value</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b">
-                    <td className="px-4 py-2">URL</td>
-                    <td className="px-4 py-2">{data.url}</td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="px-4 py-2">Carbon Footprint (Grid)</td>
-                    <td className="px-4 py-2">
-                      {data.statistics.co2.grid.grams.toFixed(2)} gCO2
-                    </td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="px-4 py-2">Carbon Footprint (Renewable)</td>
-                    <td className="px-4 py-2">
-                      {data.statistics.co2.renewable.grams.toFixed(2)} gCO2
-                    </td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="px-4 py-2">Energy Usage</td>
-                    <td className="px-4 py-2">
-                      {data.statistics.energy.toFixed(6)} kWh
-                    </td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="px-4 py-2">Cleaner Than</td>
-                    <td className="px-4 py-2">
-                      {(data.cleanerThan * 100).toFixed(2)}%
-                    </td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="px-4 py-2">Rating</td>
-                    <td className="px-4 py-2">{data.rating}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      ) : (
-        // <div>
-        //   <div className="border p-6 rounded-lg shadow-lg bg-green-500 text-green-50">
-        //     <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-        //       <div className="space-y-2">
-        //         <h3 className="text-2xl font-bold">Carbon Footprint</h3>
-        //         <p className="text-4xl font-bold">
-        //           {(
-        //             data.statistics.co2.grid.grams +
-        //             data.statistics.co2.renewable.grams
-        //           ).toFixed(2)}{" "}
-        //           gCO2
-        //         </p>
-        //       </div>
-        //       <div className="space-y-2">
-        //         <h3 className="text-2xl font-bold">Energy Usage</h3>
-        //         <p className="text-4xl font-bold">
-        //           {data.statistics.energy.toFixed(6)} kWh
-        //         </p>
-        //       </div>
-        //       <div className="space-y-2">
-        //         <h3 className="text-2xl font-bold">Rating</h3>
-        //         <p className="text-4xl font-bold">{data.rating}</p>
-        //       </div>
-        //     </div>
-        //   </div>
-
-        //   <div className="mt-4">
-        //     <h2 className="text-2xl font-bold mb-4">
-        //       Detailed Statistics
-        //     </h2>
-        //     <div className="overflow-x-auto">
-        //       <table className="w-full table-auto border-collapse">
-        //         <thead>
-        //           <tr className="bg-gray-200">
-        //             <th className="px-4 py-2 text-left">Metric</th>
-        //             <th className="px-4 py-2 text-left">Value</th>
-        //           </tr>
-        //         </thead>
-        //         <tbody>
-        //           <tr className="border-b">
-        //             <td className="px-4 py-2">URL</td>
-        //             <td className="px-4 py-2">{data.url}</td>
-        //           </tr>
-        //           <tr className="border-b">
-        //             <td className="px-4 py-2">Carbon Footprint (Grid)</td>
-        //             <td className="px-4 py-2">
-        //               {data.statistics.co2.grid.grams.toFixed(2)} gCO2
-        //             </td>
-        //           </tr>
-        //           <tr className="border-b">
-        //             <td className="px-4 py-2">
-        //               Carbon Footprint (Renewable)
-        //             </td>
-        //             <td className="px-4 py-2">
-        //               {data.statistics.co2.renewable.grams.toFixed(2)}{" "}
-        //               gCO2
-        //             </td>
-        //           </tr>
-        //           <tr className="border-b">
-        //             <td className="px-4 py-2">Energy Usage</td>
-        //             <td className="px-4 py-2">
-        //               {data.statistics.energy.toFixed(6)} kWh
-        //             </td>
-        //           </tr>
-        //           <tr className="border-b">
-        //             <td className="px-4 py-2">Cleaner Than</td>
-        //             <td className="px-4 py-2">
-        //               {(data.cleanerThan * 100).toFixed(2)}%
-        //             </td>
-        //           </tr>
-        //           <tr className="border-b">
-        //             <td className="px-4 py-2">Rating</td>
-        //             <td className="px-4 py-2">{data.rating}</td>
-        //           </tr>
-        //         </tbody>
-        //       </table>
-        //     </div>
-        //   </div>
-        // </div>
-        <p>No results</p>
-      )}
     </>
   );
 }
